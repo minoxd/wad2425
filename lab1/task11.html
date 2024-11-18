@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>task11</title>
+  <style>
+    .header {
+      border: 1px solid darkblue;
+      background-color: lightblue;
+      text-align: center;
+    }
+    .main{
+      display: flex;
+    }
+    .left{
+      border-left: 1px solid darkblue;
+      border-right: 1px solid darkblue;
+      background-color: grey;
+      width: 30%;
+    }
+    .left a{
+      text-decoration: none;
+    }
+    .right{
+      border-left: 1px solid darkblue;
+      border-right: 1px solid darkblue;
+      background-color: lightgreen;
+      width: 70%;
+    }
+    .footer{
+      border: 1px solid darkblue;
+      background-color: lightblue;
+      text-align: center;
+    }
+    .thumbnail {
+      width: 50px;
+      height: 50px;
+      border: 1px solid white;
+    }
+    .thumbnail:hover{
+      border: 5px solid white;
+    }
+    .category #cat1,#cat2,#cat3{
+      display: none;
+    }
+  </style>
+  <script>
+    function showCat(catId) {
+      const cat = document.querySelectorAll('.category');
+      cat.forEach(element => element.style.display = 'none');
+      document.getElementById(catId).style.display = 'block';
+    }
+    function showFull(src){
+      const popup = window.open('','popup','width=500,height=500');
+      popup.document.write(`<img src="${src}" alt="">`)
+    }
+  </script>
+</head>
+<body>
+<div class="header">banner</div>
+<div class="main">
+  <div class="left">
+    <a href="javascript:void(0)" onclick="showCat(null)">reset</a><br>
+    <a href="javascript:void(0)" onclick="showCat('cat1')">cat1</a><br>
+    <a href="javascript:void(0)" onclick="showCat('cat2')">cat2</a><br>
+    <a href="javascript:void(0)" onclick="showCat('cat3')">cat3</a><br>
+    <a href="about.html">about</a>
+  </div>
+  <div class="right">
+    <div id="cat1" class="category">
+      <img class="thumbnail" src="images/img1.jpg" alt="" onclick="showFull('images/img1.jpg')">
+    </div>
+    <div id="cat2" class="category">
+      <img class="thumbnail" src="images/img2.jpg" alt="" onclick="showFull('images/img2.jpg')">
+    </div>
+    <div id="cat3" class="category">
+      <img class="thumbnail" src="images/img3.jpg" alt="" onclick="showFull('images/img3.jpg')">
+    </div>
+  </div>
+</div>
+<div class="footer">copyright</div>
+</body>
+</html>

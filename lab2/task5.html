@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>task5</title>
+</head>
+<body>
+  <h1>nhan chia</h1>
+  <form>
+    <label for="first">first</label><input id="first" type="text"><br>
+    <label for="second">second</label><input id="second" type="text"><br>
+    <button onclick="multiply()">multiply</button>
+    <button onclick="divide()">divide</button>
+  </form>
+  <p id="result">result = </p>
+<script>
+  function multiply() {
+    let a = document.getElementById("first").value;
+    let b = document.getElementById("second").value;
+    let result = document.getElementById("result");
+    result.innerHTML = `result = ${a*b}`;
+  }
+  function divide() {
+    let a = document.getElementById("first").value;
+    let b = document.getElementById("second").value;
+    let result = document.getElementById("result");
+    result.innerHTML = `result = ${a/b}`;
+  }
+</script>
+</body>
+</html>

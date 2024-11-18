@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>students</title>
+</head>
+<body>
+<h1>Excellent</h1>
+<table>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>class</th>
+        <th>mark</th>
+    </tr>
+    {% for student in excellent %}
+        <tr>
+            <td>{{ student.id }}</td>
+            <td>{{ student.name }}</td>
+            <td>{{ student.class_name }}</td>
+            <td>{{ student.mark }}</td>
+        </tr>
+    {% endfor %}
+</table>
+<h1>Good</h1>
+<table>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>class</th>
+        <th>mark</th>
+    </tr>
+    {% for student in good %}
+        <tr>
+            <td>{{ student.id }}</td>
+            <td>{{ student.name }}</td>
+            <td>{{ student.class_name }}</td>
+            <td>{{ student.mark }}</td>
+        </tr>
+    {% endfor %}
+</table>
+<h1>Average</h1>
+<table>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>class</th>
+        <th>mark</th>
+    </tr>
+    {% for student in average %}
+        <tr>
+            <td>{{ student.id }}</td>
+            <td>{{ student.name }}</td>
+            <td>{{ student.class_name }}</td>
+            <td>{{ student.mark }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

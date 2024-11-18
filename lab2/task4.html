@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task4</title>
+</head>
+<body>
+<h1>sign up</h1>
+<form onsubmit="return checkPass()">
+  <label for="username">username</label><input type="text" id="username" placeholder="username"><br>
+  <label for="pw1">password</label><input type="password" id="pw1"><br>
+  <label for="pw2">retype password</label><input type="password" id="pw2"><br>
+  <input type="submit">
+</form>
+<script>
+  function checkPass() {
+    let pw1 = document.getElementById("pw1").value;
+    let pw2 = document.getElementById("pw2").value;
+    if (pw1 !== pw2) {
+      alert("not match")
+      return false;
+    }
+    alert("hello "+document.getElementById("username").value)
+    return true;
+  }
+</script>
+</body>
+</html>
